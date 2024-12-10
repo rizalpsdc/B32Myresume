@@ -1,0 +1,83 @@
+overview
+Hydrogen combustion engines work similarly to traditional gasoline engines but burn hydrogen instead of petrol. 
+This process produces water vapor as the primary emission, making it much cleaner than fossil fuels. Kawasaki, 
+for example, is developing a hydrogen-powered motorcycle based on their Ninja H2 model. 
+This bike uses a supercharged engine modified for direct hydrogen fuel injection, 
+which helps maximize power output while minimizing emissions
+
+scope
+1. Technological Development
+Fuel Cell Integration: Developing efficient and compact hydrogen fuel cells that can fit within the limited space of a motorcycle frame. This includes designing fuel cell stacks and integrating them with electric motors1.
+Hydrogen Storage: Creating safe and efficient hydrogen storage solutions that can be easily refueled and provide sufficient range for practical use1.
+2. Infrastructure and Refueling
+Refueling Stations: Establishing a network of hydrogen refueling stations to support the widespread adoption of hydrogen motorcycles. This is crucial for the practical use of these vehicles1.
+Hydrogen Production: Ensuring that hydrogen is produced in an environmentally friendly manner, such as through electrolysis using renewable energy sources1.
+3. Research and Testing
+Prototype Development: Building and testing prototypes to evaluate performance, safety, and efficiency. This includes both laboratory testing and real-world trials23.
+Open-Source Platforms: Some projects, like those at MIT, are developing open-source platforms to allow other researchers and developers to test and improve hydrogen motorcycle technology2.
+
+Time line
+This project will take around 7 months below the details of the work distribution
+
+1. Design and Engineering
+Mechanical Design: Engineers focus on designing the bike's frame, integrating the hydrogen fuel cell or combustion engine, and ensuring all components fit within the limited space of a motorcycle12.
+Electrical Systems: This includes designing the electrical architecture, integrating the fuel cell with the electric motor, and ensuring efficient power management1.
+2. Hydrogen Storage and Fuel Systems
+Storage Solutions: Developing safe and efficient hydrogen storage systems that can withstand high pressures and fit within the motorcycle's frame2.
+Fuel Delivery: Designing the fuel delivery system to ensure a consistent and safe supply of hydrogen to the engine or fuel cell3.
+3. Prototyping and Testing
+Prototype Development: Building initial prototypes to test the integration of all systems. This includes both bench testing and real-world trials1.
+Performance Testing: Conducting tests to evaluate the bike's performance, efficiency, and safety under various conditions1.
+4. Safety and Compliance
+Safety Protocols: Ensuring all safety standards are met, including handling and storage of hydrogen, and designing safety features to protect riders1.
+Regulatory Compliance: Working to meet all regulatory requirements for road use, including emissions standards and vehicle safety regulations2.
+
+feedback form
+
+<form action="/submit_form" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+        
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+        
+        <input type="submit" value="Submit">
+      </form>
+
+The action Attribute
+The action attribute in the <form> tag specifies where to send the form data when the form is submitted. 
+This URL can be an absolute URL (pointing to a different website) or a relative URL 
+(pointing to a file within the same website).
+
+get method
+GET Method
+Data in URL: Form data is appended to the URL in name/value pairs. This means the data is visible in the browser's address bar.
+<form action="/submit_form.php" method="get">
+  <!-- form elements here -->
+</form>
+Length Limit: There is a limit to the amount of data that can be sent because URLs have a length restriction (usually around 2048 characters).
+Caching: Requests can be cached by the browser, which can be useful for repeated requests.
+Bookmarking: URLs with parameters can be bookmarked, making it easy to revisit the same query.
+Security: Less secure for sensitive data (like passwords) because the data is visible in the URL.
+
+post method
+Data in Body: Form data is sent in the body of the HTTP request, not in the URL. This makes it invisible in the browser's address bar.
+<form action="/submit_form.php" method="post">
+  <!-- form elements here -->
+</form>
+No Length Limit: There is no limit to the amount of data that can be sent, making it suitable for large amounts of data.
+Caching: Requests are not cached by default, which is useful for operations that should not be repeated (like submitting a form).
+Bookmarking: Cannot be bookmarked since the data is not in the URL.
+Security: More secure for sensitive data because the data is not exposed in the URL. However, it should still be sent over HTTPS to ensure encryption.
+
+when need to use get and post
+
+Use GET: When you need to retrieve data without causing any side effects, like searching or filtering data.
+Use POST: When you need to send data that will change the server state, like submitting a form, uploading a file,
+or sending sensitive information.
